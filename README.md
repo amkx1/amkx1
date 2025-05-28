@@ -3,6 +3,8 @@
 
 I like playing *CTFs*
 
+Currently interested in **Digital Forensics**
+
 Active on TryHackMe
 
 BTLO Player
