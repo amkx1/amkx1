@@ -1,7 +1,8 @@
 # Hi there!
 - Just a curious person who wants to know more..
+### Cybersecurity Student
 
-I like playing *CTFs*
+I like playing *CTFs* and creating stuff
 
 Currently interested in **Digital Forensics**
 
