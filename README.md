@@ -10,7 +10,7 @@ Active on TryHackMe
 
 BTLO Player
 
-![THM Badge](https://tryhackme-badges.s3.amazonaws.com/Amk01.png?update=2)
+![THM Badge](https://tryhackme-badges.s3.amazonaws.com/Amk01.png?update=4)
 
 <h2 align="center"> Connect w Me </h2>
 <p align="center">
