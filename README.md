@@ -14,8 +14,8 @@ BTLO Player
 
 <h2 align="center"> Connect w Me </h2>
 <p align="center">
-    <a href="https://www.linkedin.com/in/ankita-m-kumar-b6a624327"><img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white"/></a> 
-    <a href="https://x.com/ankita01mk"><img src="https://img.shields.io/badge/-Twitter-1DA1F2?style=flat&logo=Twitter&logoColor=white"/></a>
+    <a href="https://www.linkedin.com/in/ankita-m-kumar-b6a624327"><img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="40" height="40" alt="LinkedIn"></a> 
+    <a href="https://x.com/ankita01mk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" width="40" height="40" alt="X"></a>
 </p>
 <!---
 mk-ankita/mk-ankita is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
