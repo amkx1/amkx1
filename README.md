@@ -13,8 +13,6 @@ Currently interested in **Digital Forensics**
 
 Active on TryHackMe
 
-BTLO Player
-
 ![THM Badge](https://tryhackme-badges.s3.amazonaws.com/0KeX.png)
 
 <h2 align="center"> Connect w Me </h2>
