@@ -9,7 +9,7 @@
 
 I like playing *CTFs* and creating stuff
 
-Currently interested in **Threat Research/Hunting**
+Currently interested in **Threat Intelligence/Hunting**
 
 Active on TryHackMe
 
