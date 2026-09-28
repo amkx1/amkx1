@@ -10,10 +10,6 @@
 
 <br>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&label=visitors&color=ffb52e&style=flat-square">
-</p>
-
 ### currently
 
 ```text
