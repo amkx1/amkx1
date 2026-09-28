@@ -1,16 +1,23 @@
-# Hi there!
-- Just a curious person who wants to know more..
+# hi, i'm kelog
 
 <p align="center">
-  <img src="https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif" width="300" />
+  <img src="./assets/circuit.svg" width="700">
 </p>
 
-### Cybersecurity Student
+<p align="center">
+  <i>just a curious person who likes making things and figuring things out.</i>
+</p>
 
-I like playing *CTFs* and creating stuff
+<br>
 
-Currently interested in **Threat Intelligence/Hunting**
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&label=visitors&color=ffb52e&style=flat-square">
+</p>
 
-Active on TryHackMe
+### currently
 
-![THM Badge](https://tryhackme-badges.s3.amazonaws.com/0KeX.png)
+```text
+♡ learning new things
+♡ building little projects
+♡ breaking things & fixing them
+♡ collecting ideas
