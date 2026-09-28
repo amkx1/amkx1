@@ -1,0 +1,492 @@
+<svg width="900" height="300" viewBox="0 0 900 300"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+
+    <!-- Amber glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Moving circuit pulse -->
+    <circle id="pulse" r="4" fill="#ffc04d" filter="url(#softGlow)"/>
+
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="300" rx="24" fill="#0b0b0b"/>
+
+  <!-- subtle inner panel -->
+  <rect x="12" y="12" width="876" height="276"
+        rx="18"
+        fill="none"
+        stroke="#29200f"
+        stroke-width="2"/>
+
+  <!-- ================= CIRCUIT TRACES ================= -->
+
+  <g fill="none"
+     stroke="#8a5d12"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+    <!-- top left -->
+    <path d="M30 65 H145 V100 H235"/>
+    <path d="M30 105 H105 V130 H205"/>
+    <path d="M65 35 V65"/>
+    <path d="M145 65 V45 H190"/>
+
+    <!-- bottom left -->
+    <path d="M30 235 H145 V200 H235"/>
+    <path d="M75 265 V235"/>
+    <path d="M145 200 V220 H185"/>
+
+    <!-- top right -->
+    <path d="M870 65 H755 V100 H665"/>
+    <path d="M870 105 H795 V130 H695"/>
+    <path d="M835 35 V65"/>
+    <path d="M755 65 V45 H710"/>
+
+    <!-- bottom right -->
+    <path d="M870 235 H755 V200 H665"/>
+    <path d="M825 265 V235"/>
+    <path d="M755 200 V220 H715"/>
+
+    <!-- central connections -->
+    <path d="M235 100 H280"/>
+    <path d="M235 200 H280"/>
+    <path d="M620 100 H665"/>
+    <path d="M620 200 H665"/>
+
+    <!-- decorative traces -->
+    <path d="M250 35 H300 V55"/>
+    <path d="M650 35 H600 V55"/>
+    <path d="M250 265 H300 V245"/>
+    <path d="M650 265 H600 V245"/>
+
+  </g>
+
+
+  <!-- ================= CIRCUIT NODES ================= -->
+
+  <g fill="#ffb52e" filter="url(#softGlow)">
+
+    <circle cx="30" cy="65" r="4"/>
+    <circle cx="145" cy="65" r="4"/>
+    <circle cx="30" cy="105" r="4"/>
+
+    <circle cx="30" cy="235" r="4"/>
+    <circle cx="145" cy="200" r="4"/>
+
+    <circle cx="870" cy="65" r="4"/>
+    <circle cx="755" cy="65" r="4"/>
+    <circle cx="870" cy="105" r="4"/>
+
+    <circle cx="870" cy="235" r="4"/>
+    <circle cx="755" cy="200" r="4"/>
+
+    <circle cx="250" cy="35" r="3"/>
+    <circle cx="650" cy="35" r="3"/>
+    <circle cx="250" cy="265" r="3"/>
+    <circle cx="650" cy="265" r="3"/>
+
+  </g>
+
+
+  <!-- ================= MOVING DATA ================= -->
+
+  <g>
+
+    <use href="#pulse">
+      <animateMotion
+        dur="2.4s"
+        repeatCount="indefinite"
+        path="M30 65 H145 V100 H235"/>
+    </use>
+
+    <use href="#pulse">
+      <animateMotion
+        dur="2.8s"
+        repeatCount="indefinite"
+        path="M30 235 H145 V200 H235"/>
+    </use>
+
+    <use href="#pulse">
+      <animateMotion
+        dur="2.1s"
+        repeatCount="indefinite"
+        path="M870 65 H755 V100 H665"/>
+    </use>
+
+    <use href="#pulse">
+      <animateMotion
+        dur="2.7s"
+        repeatCount="indefinite"
+        path="M870 235 H755 V200 H665"/>
+    </use>
+
+  </g>
+
+
+  <!-- ================= LEFT MINI BOARD ================= -->
+
+  <g>
+
+    <rect x="75" y="125"
+          width="105"
+          height="55"
+          rx="8"
+          fill="#11110f"
+          stroke="#5e4314"
+          stroke-width="2"/>
+
+    <!-- board traces -->
+    <path d="M88 143 H115 M88 158 H105 M145 143 H168 M145 158 H168"
+          stroke="#a87317"
+          stroke-width="2"/>
+
+    <!-- tiny components -->
+    <rect x="115" y="137" width="22" height="12"
+          rx="2"
+          fill="#1a150b"
+          stroke="#d9951c"/>
+
+    <rect x="115" y="153" width="22" height="12"
+          rx="2"
+          fill="#1a150b"
+          stroke="#d9951c"/>
+
+    <circle cx="168" cy="143" r="3"
+            fill="#ffb52e"
+            filter="url(#softGlow)">
+      <animate attributeName="opacity"
+               values="1;0.2;1"
+               dur="1.4s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="168" cy="158" r="3"
+            fill="#ffb52e"
+            filter="url(#softGlow)">
+      <animate attributeName="opacity"
+               values="0.2;1;0.2"
+               dur="1.8s"
+               repeatCount="indefinite"/>
+    </circle>
+
+  </g>
+
+
+  <!-- ================= RIGHT MINI BOARD ================= -->
+
+  <g>
+
+    <rect x="720" y="125"
+          width="105"
+          height="55"
+          rx="8"
+          fill="#11110f"
+          stroke="#5e4314"
+          stroke-width="2"/>
+
+    <path d="M733 143 H760 M733 158 H750 M790 143 H813 M790 158 H813"
+          stroke="#a87317"
+          stroke-width="2"/>
+
+    <rect x="760" y="137"
+          width="22"
+          height="12"
+          rx="2"
+          fill="#1a150b"
+          stroke="#d9951c"/>
+
+    <rect x="760" y="153"
+          width="22"
+          height="12"
+          rx="2"
+          fill="#1a150b"
+          stroke="#d9951c"/>
+
+    <circle cx="813" cy="143" r="3"
+            fill="#ffb52e"
+            filter="url(#softGlow)">
+      <animate attributeName="opacity"
+               values="1;0.2;1"
+               dur="1.6s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="813" cy="158" r="3"
+            fill="#ffb52e"
+            filter="url(#softGlow)">
+      <animate attributeName="opacity"
+               values="0.2;1;0.2"
+               dur="1.2s"
+               repeatCount="indefinite"/>
+    </circle>
+
+  </g>
+
+
+  <!-- ================= CENTRAL CHIP ================= -->
+
+  <g>
+
+    <!-- chip shadow -->
+    <rect x="278" y="62"
+          width="344"
+          height="176"
+          rx="18"
+          fill="#050505"
+          stroke="#3b2a0e"
+          stroke-width="3"/>
+
+    <!-- chip body -->
+    <rect x="290" y="50"
+          width="320"
+          height="176"
+          rx="18"
+          fill="#15130f"
+          stroke="#a86d13"
+          stroke-width="2"/>
+
+    <!-- chip inner -->
+    <rect x="310" y="68"
+          width="280"
+          height="140"
+          rx="12"
+          fill="#0d0d0c"
+          stroke="#3e3016"
+          stroke-width="2"/>
+
+    <!-- pins top -->
+    <g stroke="#a86d13" stroke-width="4">
+      <path d="M335 50 V38"/>
+      <path d="M370 50 V38"/>
+      <path d="M405 50 V38"/>
+      <path d="M440 50 V38"/>
+      <path d="M475 50 V38"/>
+      <path d="M510 50 V38"/>
+      <path d="M545 50 V38"/>
+      <path d="M580 50 V38"/>
+    </g>
+
+    <!-- pins bottom -->
+    <g stroke="#a86d13" stroke-width="4">
+      <path d="M335 226 V238"/>
+      <path d="M370 226 V238"/>
+      <path d="M405 226 V238"/>
+      <path d="M440 226 V238"/>
+      <path d="M475 226 V238"/>
+      <path d="M510 226 V238"/>
+      <path d="M545 226 V238"/>
+      <path d="M580 226 V238"/>
+    </g>
+
+    <!-- pins left -->
+    <g stroke="#a86d13" stroke-width="4">
+      <path d="M290 90 H278"/>
+      <path d="M290 120 H278"/>
+      <path d="M290 150 H278"/>
+      <path d="M290 180 H278"/>
+    </g>
+
+    <!-- pins right -->
+    <g stroke="#a86d13" stroke-width="4">
+      <path d="M610 90 H622"/>
+      <path d="M610 120 H622"/>
+      <path d="M610 150 H622"/>
+      <path d="M610 180 H622"/>
+    </g>
+
+  </g>
+
+
+  <!-- ================= CUTE ROBOT ================= -->
+
+  <g>
+
+    <!-- ears -->
+    <rect x="348" y="104"
+          width="18"
+          height="38"
+          rx="8"
+          fill="#191713"
+          stroke="#c1841b"
+          stroke-width="2"/>
+
+    <rect x="534" y="104"
+          width="18"
+          height="38"
+          rx="8"
+          fill="#191713"
+          stroke="#c1841b"
+          stroke-width="2"/>
+
+    <!-- robot head -->
+    <rect x="365" y="82"
+          width="170"
+          height="105"
+          rx="30"
+          fill="#181611"
+          stroke="#e09a22"
+          stroke-width="3"
+          filter="url(#softGlow)"/>
+
+    <!-- antenna -->
+    <path d="M450 82 V65"
+          stroke="#d08a1a"
+          stroke-width="3"/>
+
+    <circle cx="450" cy="58"
+            r="7"
+            fill="#ffb52e"
+            filter="url(#glow)">
+      <animate attributeName="r"
+               values="5;8;5"
+               dur="1.5s"
+               repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+               values="0.5;1;0.5"
+               dur="1.5s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <!-- face panel -->
+    <rect x="388" y="104"
+          width="124"
+          height="55"
+          rx="18"
+          fill="#0b0b0a"
+          stroke="#664713"
+          stroke-width="2"/>
+
+    <!-- eyes -->
+    <rect x="410" y="120"
+          width="16"
+          height="12"
+          rx="5"
+          fill="#ffc04d"
+          filter="url(#softGlow)">
+      <animate attributeName="height"
+               values="12;3;12"
+               dur="4s"
+               repeatCount="indefinite"/>
+    </rect>
+
+    <rect x="474" y="120"
+          width="16"
+          height="12"
+          rx="5"
+          fill="#ffc04d"
+          filter="url(#softGlow)">
+      <animate attributeName="height"
+               values="12;3;12"
+               dur="4s"
+               repeatCount="indefinite"/>
+    </rect>
+
+    <!-- cute mouth -->
+    <path d="M435 145 Q450 155 465 145"
+          fill="none"
+          stroke="#c78619"
+          stroke-width="3"
+          stroke-linecap="round"/>
+
+    <!-- cheeks -->
+    <circle cx="402" cy="143"
+            r="5"
+            fill="#8f5c12"
+            opacity="0.7"/>
+
+    <circle cx="498" cy="143"
+            r="5"
+            fill="#8f5c12"
+            opacity="0.7"/>
+
+  </g>
+
+
+  <!-- ================= LITTLE HEART ================= -->
+
+  <path d="M450 195
+           C438 182 420 190 420 204
+           C420 218 450 230 450 230
+           C450 230 480 218 480 204
+           C480 190 462 182 450 195 Z"
+        fill="#d9911b"
+        opacity="0.8"
+        filter="url(#softGlow)">
+
+    <animate attributeName="opacity"
+             values="0.5;1;0.5"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </path>
+
+
+  <!-- ================= SCREWS ================= -->
+
+  <g fill="#765315">
+
+    <circle cx="307" cy="67" r="4"/>
+    <circle cx="593" cy="67" r="4"/>
+    <circle cx="307" cy="209" r="4"/>
+    <circle cx="593" cy="209" r="4"/>
+
+  </g>
+
+
+  <!-- ================= DECORATIVE TEXT ================= -->
+
+  <g font-family="monospace">
+
+    <text x="40" y="25"
+          fill="#74531c"
+          font-size="10">
+      SIGNAL_01
+    </text>
+
+    <text x="760" y="25"
+          fill="#74531c"
+          font-size="10">
+      ONLINE
+    </text>
+
+    <text x="350" y="270"
+          fill="#7d5b20"
+          font-size="11">
+      SYSTEM // CURIOUS_MIND.exe
+    </text>
+
+  </g>
+
+
+  <!-- ================= BLINKING STATUS LED ================= -->
+
+  <circle cx="450" cy="280"
+          r="3"
+          fill="#ffb52e"
+          filter="url(#softGlow)">
+
+    <animate attributeName="opacity"
+             values="1;0.15;1"
+             dur="1s"
+             repeatCount="indefinite"/>
+
+  </circle>
+
+</svg>
